@@ -180,9 +180,9 @@ func (h *HCI) handlePacket(b []byte) {
 	t, b := packetType(b[0]), b[1:]
 	var err error
 	switch t {
-	case typCommandPkt:
-		// op := uint16(b[0]) | uint16(b[1])<<8
-		// log.Printf("unmanaged cmd: opcode (%04x) [ % X ]\n", op, b)
+	// case typCommandPkt:
+	// op := uint16(b[0]) | uint16(b[1])<<8
+	// log.Printf("unmanaged cmd: opcode (%04x) [ % X ]\n", op, b)
 	case typACLDataPkt:
 		err = h.handleL2CAP(b)
 	case typSCODataPkt:
