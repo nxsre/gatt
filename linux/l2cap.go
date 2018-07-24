@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/paypal/gatt/linux/cmd"
+	"github.com/schollz/gatt/linux/cmd"
 )
 
 type aclData struct {

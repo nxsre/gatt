@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/paypal/gatt/linux/evt"
-	"github.com/paypal/gatt/linux/util"
+	"github.com/schollz/gatt/linux/evt"
+	"github.com/schollz/gatt/linux/util"
 )
 
 type CmdParam interface {

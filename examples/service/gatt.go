@@ -1,7 +1,7 @@
 package service
 
 import (
-	"github.com/paypal/gatt"
+	"github.com/schollz/gatt"
 )
 
 var (
