@@ -44,7 +44,6 @@ func bdaddr(d gatt.Device) {
 	if b[0] != 0 {
 		fmt.Printf("Failed to get bdaddr with HCI Raw command, status: %d", b[0])
 	}
-	log.Printf("BD Addr: %02X:%02X:%02X:%02X:%02X:%02X", b[6], b[5], b[4], b[3], b[2], b[1])
 }
 
 func main() {
@@ -60,14 +59,14 @@ func main() {
 	)
 
 	if err != nil {
-		log.Printf("Failed to open device, err: %s", err)
+		// log.Printf("Failed to open device, err: %s", err)
 		return
 	}
 
 	// Register optional handlers.
 	d.Handle(
-		gatt.CentralConnected(func(c gatt.Central) { log.Println("Connect: ", c.ID()) }),
-		gatt.CentralDisconnected(func(c gatt.Central) { log.Println("Disconnect: ", c.ID()) }),
+		gatt.CentralConnected(func(c gatt.Central) { // log.Println("Connect: ", c.ID()) }),
+		gatt.CentralDisconnected(func(c gatt.Central) { // log.Println("Disconnect: ", c.ID()) }),
 	)
 
 	// A mandatory handler for monitoring device state.

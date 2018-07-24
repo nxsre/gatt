@@ -5,7 +5,6 @@ import (
 	"errors"
 	"fmt"
 	"io"
-	"log"
 
 	"github.com/paypal/gatt/linux/evt"
 	"github.com/paypal/gatt/linux/util"
@@ -115,7 +114,7 @@ func (c *Cmd) processCmdEvents() {
 				}
 			}
 			if !found {
-				log.Printf("Can't find the cmdPkt for this CommandStatusEP: %v", status)
+				// log.Printf("Can't find the cmdPkt for this CommandStatusEP: %v", status)
 			}
 		case comp := <-c.compc:
 			found := false
@@ -128,7 +127,7 @@ func (c *Cmd) processCmdEvents() {
 				}
 			}
 			if !found {
-				log.Printf("Can't find the cmdPkt for this CommandCompleteEP: %v", comp)
+				// log.Printf("Can't find the cmdPkt for this CommandCompleteEP: %v", comp)
 			}
 		}
 	}

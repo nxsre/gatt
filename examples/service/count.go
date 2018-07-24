@@ -2,7 +2,6 @@ package service
 
 import (
 	"fmt"
-	"log"
 	"time"
 
 	"github.com/paypal/gatt"
@@ -19,7 +18,7 @@ func NewCountService() *gatt.Service {
 
 	s.AddCharacteristic(gatt.MustParseUUID("16fe0d80-c111-11e3-b8c8-0002a5d5c51b")).HandleWriteFunc(
 		func(r gatt.Request, data []byte) (status byte) {
-			log.Println("Wrote:", string(data))
+			// log.Println("Wrote:", string(data))
 			return gatt.StatusSuccess
 		})
 

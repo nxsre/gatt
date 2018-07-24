@@ -70,10 +70,10 @@ func (r *attrRange) Subrange(start, end uint16) []attr {
 }
 
 func dumpAttributes(aa []attr) {
-	log.Printf("Generating attribute table:")
-	log.Printf("handle\ttype\tprops\tsecure\tpvt\tvalue")
+	// log.Printf("Generating attribute table:")
+	// log.Printf("handle\ttype\tprops\tsecure\tpvt\tvalue")
 	for _, a := range aa {
-		log.Printf("0x%04X\t0x%s\t0x%02X\t0x%02x\t%T\t[ % X ]",
+		// log.Printf("0x%04X\t0x%s\t0x%02X\t0x%02x\t%T\t[ % X ]",
 			a.h, a.typ, int(a.props), int(a.secure), a.pvt, a.value)
 	}
 }
