@@ -181,7 +181,7 @@ func (h *HCI) handlePacket(b []byte) {
 	var err error
 	switch t {
 	case typCommandPkt:
-		op := uint16(b[0]) | uint16(b[1])<<8
+		// op := uint16(b[0]) | uint16(b[1])<<8
 		// log.Printf("unmanaged cmd: opcode (%04x) [ % X ]\n", op, b)
 	case typACLDataPkt:
 		err = h.handleL2CAP(b)
