@@ -1,7 +1,5 @@
 package gatt
 
-import "log"
-
 // attr is a BLE attribute. It is not exported;
 // managing attributes is an implementation detail.
 type attr struct {
@@ -74,7 +72,7 @@ func dumpAttributes(aa []attr) {
 	// log.Printf("handle\ttype\tprops\tsecure\tpvt\tvalue")
 	for _, a := range aa {
 		// log.Printf("0x%04X\t0x%s\t0x%02X\t0x%02x\t%T\t[ % X ]",
-			a.h, a.typ, int(a.props), int(a.secure), a.pvt, a.value)
+		// a.h, a.typ, int(a.props), int(a.secure), a.pvt, a.value)
 	}
 }
 
