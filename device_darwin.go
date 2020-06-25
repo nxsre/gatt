@@ -63,7 +63,8 @@ func NewDevice(opts ...Option) (Device, error) {
 		subscribers: make(map[string]*central),
 	}
 	d.Option(opts...)
-	d.conn = xpc.XpcConnect("com.apple.blued", d)
+// 	d.conn = xpc.XpcConnect("com.apple.blued", d)
+	d.conn = xpc.XpcConnect("com.apple.bluetoothd", d)
 	return d, nil
 }
 
